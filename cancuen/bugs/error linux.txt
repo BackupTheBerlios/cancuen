@@ -1,0 +1,66 @@
+Hi I'm making a project using smarty,
+I'm looking for something that can help me and find FastTemplate and Smarty
+Of course Choose Smarty ....
+
+But in the developer time i have some throubles like this
+
+Under Windows 95 my Page run Fine
+I use Apache 1.3.23 and PHP 4.3.0-Dev and Smarty Version 2.5.0 (April 11, 2003)
+
+
+Under Windows XP my Page don't run
+I use Apache 2.40 and PHP 4.3.0 and Smarty Version 2.5.0 (April 11, 2003)
+
+And the problem is that:
+first:  
+If is set $smarty->debugging = true, the debugger window don't appear.
+but the templates are parsed !!!!
+
+second:
+The vars are not parsed by example: 
+http://localhost/test/index.php?centermodule=imggallery&cat=1
+
+the vars
+.....
+$smarty->assign("CENTERMODULE",$centermodule);
+$smarty->assign("CAT",$cat);
+$smarty->display("img.tpl");
+.....
+img.tpl
+.....
+	{$CENTERMODULE} have nothing
+	{$CAT}  	have nothing
+.....
+
+
+
+
+From now on....
+
+Under Linux I Have installed Apache 2.0.40 and PHP 5.0 and Get this message
+
+Parse error: parse error in /usr/local/apache2/htdocs/test/Smarty/libs/Smarty.class.php 
+on line 1311
+
+Fatal error: Class 'smarty' not found in /usr/local/apache2/htdocs/test/index.php 
+on line 6
+
+
+1306........
+1307........
+1308........
+1309 if($_compile_config) {
+1310  if(!is_object($this->_conf_obj)) {
+1311  require_once SMARTY_DIR . $this->config_class . '.class.php';
+1312  $this->_conf_obj = new $this->config_class($_config_dir);
+1313  $this->_conf_obj->overwrite = $this->config_overwrite;
+1314  $this->_conf_obj->booleanize = $this->config_booleanize;
+1315  $this->_conf_obj->read_hidden = $this->config_read_hidden;
+1316........
+1317........
+1318........
+
+
+What I can make ??
+
+Specially under Linux ???

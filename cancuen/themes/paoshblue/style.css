@@ -1,0 +1,60 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+table { border-collapse: collapse;}
+
+table.ventana {
+   background-color:#EEEEEE;
+    border: 1px #006699 solid;
+}
+
+td.dotted-right {
+  border-right: 1px darkGray dashed;
+}
+
+td{
+ font-family: Verdana, Arial, Tahoma;
+ font-size: 12px;
+}
+
+td.titulo {
+   color: #ffffff;
+   text-align: center;
+   background-color: #006699; height: 25px;
+   background-image: url(cell.gif);
+}
+
+td.solid-top {
+ font-family: Verdana, Arial, Tahoma;
+ font-size: 12px;
+ border-top: 1px solid darkGray;
+}
+
+td.img {
+    float: left;
+    }
+
+img.float-left {
+    float: left;
+	margin: 1px 10px 5px 1px
+    }
+
+img.float-right {
+    float: right;
+    }
+
+a	{
+  text-decoration: none;
+  background-color: transparent;
+  color: #666666;
+}
+
+a:link    {
+   COLOR: #666666;
+   }
+
+a:hover		{
+      text-decoration: underline;
+}
